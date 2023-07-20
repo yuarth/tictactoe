@@ -18,6 +18,7 @@ function makeMove(row, col) {
             resetBoard();
         } else {
             currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+            document.getElementById('turn').innerText = 'Current Turn: ' + currentPlayer;
         }
     }
 }
@@ -62,4 +63,5 @@ function resetBoard() {
     for (let i = 0; i < cells.length; i++) {
         cells[i].innerText = '';
     }
+    document.getElementById('turn').innerText = 'Current Turn: ' + currentPlayer;
 }
